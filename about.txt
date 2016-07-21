@@ -1,0 +1,5 @@
+Theme name:     Landedstar v1
+Description:    Custom theme by Justin
+Author name:    Justin McGuire
+Author site:    http://landedstar.com
+License:        Belongs completely to me

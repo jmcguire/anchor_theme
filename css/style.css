@@ -1,0 +1,374 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2e2d26;
+  background-image: url("../img/argyle.png");
+}
+
+/* stop animations from happening, we use javscript to remove this class, which lets the animations load*/
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+header, footer {
+  overflow: hidden; /* force clear */
+}
+
+/*
+/* Text and fonts
+/*/
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ddd;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "dlig";
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #4AA5B2;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #F2E633;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  border-bottom: 1px solid #999;
+}
+
+h4 {
+}
+
+a {
+  color: #abc;
+  text-decoration: underline;
+}
+a:visited {
+  color: #abc;
+}
+a:hover {
+}
+
+blockquote {
+  margin: 1.5em;
+}
+blockquote p:before {
+  color: rgba(255, 255, 255, .5); 
+  content: open-quote;
+  font-size: 150%;
+  line-height: 10%;
+  vertical-align: -40%;
+}
+blockquote p {
+  text-indent: -1em;
+}
+blockquote footer:before {
+  color: rgba(255, 255, 255, .5); 
+  content: "\2014";
+}
+
+code {
+  display: inline;
+  font-family: monospace;
+  font-feature-settings: normal;
+}
+p > code { /* inline code */
+  background: rgba(0,0,0,.2);
+  padding: 5px;
+}
+pre {
+  margin: 1.5em;
+  padding: 2em;
+  display: block;
+  background: rgba(0,0,0,.2);
+  font-feature-settings: normal;
+}
+
+abbr {
+  letter-spacing: 0.1em;
+}
+
+/*
+/* Simple 3-block grid, 1em gutter
+/*/
+
+.grid-unit {
+  display: block;
+  float: left;
+  width: 33.332%;
+  margin: 0;
+  padding-left: 1em;
+}
+.grid-unit:first-child,
+.grid-unit:nth-child(3n + 1){
+  padding-left: 0;
+}
+
+/*
+/* Top of page
+/*/
+
+.page-header {
+  background: #abc;
+  color: #123;
+  padding: .5em 1em;
+  font-family: 'Oswald', sans-serif;
+}
+.page-header * {
+  font-size: 1.125em; /* same as h4 */
+  color: #123;
+}
+.page-header a {
+  text-decoration: none;
+  border-bottom: 2px solid #123;
+}
+.page-header a:visited {
+  color: #123;
+}
+
+/*
+/* Individual Article
+/*/
+
+p.post-description {
+  text-align: justify;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  padding: 0 2em;
+  margin-bottom: 1.5em;
+}
+
+/* meta information */
+.post-about {
+  margin-bottom: 1.5em;
+}
+.post-about span,
+.post-about a {
+  font-style: italic;
+  color: #BDB53C;
+  margin-right: 1.2em;
+}
+
+hr {
+  margin: 3em auto 0;
+  border: none;
+  border-top: 3px double #abc;
+}
+
+/*
+/* Utility
+/*/
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.align-center { text-align: center; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+
+.star-bar {
+  text-align: center;
+  padding: 0.5em 0;
+  /* colors like page-header */
+  background-color: #abc;
+  color: #123;
+  /* sizing like h4 */
+  font-size: 1.125em;
+  line-height: 1.11;
+}
+
+/*
+/* Bottom of page
+/*/
+
+footer.page-footer {
+  margin: 2em auto 2em;
+}
+
+.footer-bar p {
+  margin: 2em 0;
+}
+
+ul.contact-info {
+  margin: 2em 0;
+}
+ul.contact-info li {
+  margin-bottom: 1em;
+}
+
+/*
+/* Vertical rhythm
+/*/
+
+body {
+  font-size: 100%;
+}
+
+/* the default scale is for small tablets and phones */
+
+body > header,
+body > footer {
+  width: 95%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+main {
+  width: 95%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+section {
+  font-size: 1em;     /* equivalent to 16px */
+  line-height: 1.65;  /* equivalent to 20px */
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;     /* 2x body copy size = 32px */
+  line-height: 1.25;  /* 45px / 36px */
+}
+
+h2 {
+  font-size: 1.625em; /* 1.625x body copy size = 26px */
+  line-height: 1.15;  /* 30px / 26px */
+}
+
+h3 {
+  font-size: 1.375em; /* 1.375x body copy size = 22px */
+  line-height: 1.14;  /* 25px / 22px */
+}
+
+h4 {
+  font-size: 1.125em; /* 1.125x body copy size = 18px */
+  line-height: 1.11;
+}
+
+/* small tablets and phones */
+@media (max-width: 43.74em) {
+  /* turn the page footer grid to a 2 col wide */
+  .page-footer .grid-unit {
+    width: 50%
+  }
+  .page-footer .grid-unit:first-child,
+  .page-footer .grid-unit:nth-child(3n + 1){
+    padding-left: 1em;
+  }
+  .page-footer .grid-unit:nth-child(2n + 1){
+    padding-left: 0;
+  }
+  pre {
+    margin: 1.5em 0;
+    padding: 1em;
+  }
+}
+
+/* large tablets and larger */
+@media (min-width: 43.75em) {
+  body > header,
+  body > footer {
+    max-width: 42em;
+  }
+  main {
+    max-width: 42em;
+  }
+  section {
+    max-width: 36em;
+    font-size: 1em;    /* equivalent to 16px */
+    line-height: 1.86; /* equivalent to 22px */
+  }
+  h1 {
+    font-size: 2.5em;  /* 2.5x body copy size = 40px */
+    line-height: 1.13;
+  }
+  h2 {
+    font-size: 2em;    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.5em;  /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+  h4 {
+    line-height: 1.22; /* (22px / 18px) */
+  }
+}
+
+/* desktop */
+@media (min-width: 56.25em) {
+  body > header,
+  body > footer {
+    max-width: 44em;
+  }
+  main {
+    max-width: 44em;
+  }
+  section {
+    max-width: 38em;
+  }
+  h1 {
+    font-size: 3em;    /* 3x body copy size = 48px */
+    line-height: 1.10; /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  }
+  h2 {
+    font-size: 2.25em; /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.75em; /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+/* ultra-large monitors */
+@media (min-width: 81.25em) {
+  main { max-width: 1200px; }
+  body > header {  max-width: 1200px; }
+}
+
+/* the following media query is a fix for a bug in older iOS devices on rotation */
+@media screen and (orientation: landscape) and (device-width: 320px) and (device-height: 480px) {
+  body {
+    width: 480px;
+  }
+}

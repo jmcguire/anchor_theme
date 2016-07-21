@@ -1,0 +1,62 @@
+input, textarea {
+  background: none;
+  color: #e5e5e5;
+  font-size: inherit;
+  border: none;
+}
+
+.form-line {
+  padding: .5em;
+  margin: 0 0 1em;
+
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 0 .5em rgba(221, 204, 187, .3),  0 0 1em rgba(0,0,0,.5);
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, .1);
+  font-size: 1em;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #dcb
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #dcb;
+}
+:-ms-input-placeholder {  
+ color: #dcb;
+}
+::-webkit-input-placeholder {
+  color: #dcb;
+  opacity: 1 !important; /* for chrome */
+}
+input-placeholder {
+  color: #dcb;
+}
+
+/* these are the font awesome spans */
+form span {
+  color: #e5e5e5;
+  display: block;
+  width: 2em;
+  float: left;
+  padding: .25em 0 0 .25em;
+}
+
+form input,
+form textarea {
+  float: left;
+  width: 30em;
+}
+
+form textarea {
+  height: 5em;
+}
+
