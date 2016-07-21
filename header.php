@@ -16,7 +16,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-  <!-- Add per-post CSS -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@landedstar">
+  <?php if(is_article()): ?>
+    <meta name="twitter:url" content="<?php echo article_full_url() ?>">
+    <meta name="twitter:title" content=<?php echo article_title() ?>"">
+    <meta name="twitter:description" content="<?php echo article_description() ?>">
+    <meta property="og:url" content="<?php echo article_full_url() ?>">
+    <meta property="og:title" content="<?php echo article_title() ?>">
+    <meta property="og:description" content="<?php echo article_description() ?>">
+    <?php #article_custom_field('teaser') ?>
+  <?php endif; ?>
+
   <?php if(article_css()): ?>
     <style><?php echo article_css(); ?></style>
   <?php endif; ?>
