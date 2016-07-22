@@ -18,14 +18,22 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@landedstar">
+  <meta name="twitter:url" content="<?php echo e(current_url()); ?>">
+  <meta property="og:url" content="<?php echo e(current_url()); ?>">
+  <meta property="og:image" content="<?php echo theme_url('/images/shallow_light.jpg'); ?>">
+  <meta property="og:site_name" content="<?php echo site_name(); ?>">
+
   <?php if(is_article()): ?>
-    <meta name="twitter:url" content="<?php echo article_full_url() ?>">
-    <meta name="twitter:title" content=<?php echo article_title() ?>"">
+    <meta name="twitter:title" content="<?php echo article_title() ?>">
     <meta name="twitter:description" content="<?php echo article_description() ?>">
-    <meta property="og:url" content="<?php echo article_full_url() ?>">
     <meta property="og:title" content="<?php echo article_title() ?>">
     <meta property="og:description" content="<?php echo article_description() ?>">
     <?php #article_custom_field('teaser') ?>
+  <?php else: ?>
+    <meta name="twitter:title" content="<?php echo page_title() ?>">
+    <meta name="twitter:description" content="<?php echo site_description() ?>">
+    <meta property="og:title" content="<?php echo page_title(); ?>">
+    <meta property="og:description" content="<?php echo site_description(); ?>">
   <?php endif; ?>
 
   <?php if(article_css()): ?>
@@ -54,8 +62,4 @@
     <!-- NEED: breadcrumbs -->
 
   </header>
-
-<!--
-  <?php site_description(); ?>
--->
 
