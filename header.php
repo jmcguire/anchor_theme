@@ -19,15 +19,17 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@landedstar">
   <meta name="twitter:url" content="<?php echo e(current_url()); ?>">
-  <meta property="og:url" content="<?php echo e(current_url()); ?>">
-  <meta property="og:image" content="<?php echo theme_url('/images/shallow_light.jpg'); ?>">
+  <meta name="twitter:image" content="http://landedstar.com//images/shallow_light.jpg">
+
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
+  <meta property="og:url" content="<?php echo e(current_url()); ?>">
+  <meta property="og:image" content="http://landedstar.com//images/shallow_light.jpg">
 
   <?php if(is_article()): ?>
     <meta name="twitter:title" content="<?php echo article_title() ?>">
-    <meta name="twitter:description" content="<?php echo article_description() ?>">
+    <meta name="twitter:description" content="<?php echo article_description() != "" ? article_description() : site_description(); ?>">
     <meta property="og:title" content="<?php echo article_title() ?>">
-    <meta property="og:description" content="<?php echo article_description() ?>">
+    <meta property="og:description" content="<?php echo article_description() != "" ? article_description() : site_description(); ?>">
     <?php #article_custom_field('teaser') ?>
   <?php else: ?>
     <meta name="twitter:title" content="<?php echo page_title() ?>">
