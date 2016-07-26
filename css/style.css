@@ -95,9 +95,13 @@ code {
   font-family: monospace;
   font-feature-settings: normal;
 }
-p > code { /* inline code */
+
+/* inline code */
+p > code,
+li > code {
   background: rgba(0,0,0,.2);
   padding: 5px;
+  white-space: nowrap; /* this could be trouble */
 }
 pre {
   margin: 1.5em;
