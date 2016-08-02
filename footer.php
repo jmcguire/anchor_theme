@@ -4,7 +4,7 @@
 
   <div class="star-bar"><span class="fa fa-star spin-star" aria-hidden="true"></span></div>
 
-  <p>Welcome to the endnotes. Return to the <a href"/blog/">front page</a>. Site assembled with Anchor and vi, mostly. <a href="/blog/colophon">Colophon</a></p>
+  <p>Welcome to the endnotes. Return to the <a href"/blog/">front page</a>. Site assembled with Anchor and vi, mostly. Check out the <a href="/blog/colophon">Colophon</a>, or see a <a href="/blog/blogs-i-follow">list of coding and design blogs I follow</a>.</p>
 
   <address id="the_city" class="vcard">
     <a href="#justin_mcguire" class="include" title="Justin McGuire"></a>
